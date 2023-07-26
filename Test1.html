@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - 1</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        ul {
+            text-align: start;
+        }
+        
+        #changing-paragraph,
+        #change-button {
+            padding: 10px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        #change-button {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        #change-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>**Test 1: Manipulating the DOM with JavaScript**</h1>
+
+    <p>Objective: Evaluate the candidate's ability to manipulate the DOM (Document Object Model)using JavaScript.</p>
+    <p>Description: Ask the candidate to create a simple HTML page containing a button. When the button is clicked, it should change the text of an existing paragraph on the page.</p>
+    <p>
+        Rating criteria:
+        <ul>
+            <li>The button must be created correctly using HTML.</li>
+            <li>The button click event must be handled using JavaScript.</li>
+            <li>The paragraph must be correctly selected from the DOM.</li>
+            <li>Paragraph text should change correctly when clicking the button.</li>
+        </ul>
+    </p>
+
+    <h1>Answer</h1>
+
+    <p id="changing-paragraph">Click the button to change this text.</p>
+    <button id="change-button">Change Text</button>
+
+    <script>
+        document.getElementById('change-button').addEventListener('click', function() {
+
+            const paragraph = document.getElementById('changing-paragraph');
+
+            if (paragraph.textContent == 'Text changed successfully!') {
+                paragraph.textContent = 'Click the button to change this text.'
+            } else {
+                paragraph.textContent = 'Text changed successfully!';
+            }
+
+        });
+    </script>
+</body>
+
+</html>
