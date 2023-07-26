@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        ul {
+            text-align: start;
+        }
+        
+        .testText {
+            text-align: center;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .box {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        
+        .box:nth-child(1) {
+            background-color: #007bff;
+        }
+        
+        .box:nth-child(2) {
+            background-color: #28a745;
+        }
+        
+        .box:nth-child(3) {
+            background-color: #dc3545;
+        }
+        
+        @media (max-width: 600px) {
+            .box {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testText">
+        <h1>**Test 2: Responsive Layout**</h1>
+        <p>Objective: Assess the candidate's skills in creating a responsive layout using HTML and CSS.</p>
+        <p>Description: Ask the candidate to create a page that has three colored rectangular elements (divs) aligned horizontally, and when the screen width is reduced, they must be stacked vertically.</p>
+        <p>
+            Rating criteria:
+            <ul>
+                <li>The layout must be created using HTML and CSS.</li>
+                <li>The three rectangular elements must be aligned horizontally on wide screens.</li>
+                <li>When the screen width is reduced, the elements must be arranged vertically.</li>
+                <li>The layout must be aesthetically pleasing and the colors of the elements must be distinct.</li>
+            </ul>
+        </p>
+    </div>
+    <h1>Answer</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+
+</html>
